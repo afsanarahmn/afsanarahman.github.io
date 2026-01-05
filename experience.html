@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Experience – Afsana Rahman</title>
 
-  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -15,73 +14,115 @@
     <a href="index.html" class="logo">AR</a>
     <div class="nav-links">
       <a href="about.html">About</a>
+      <a href="experience.html">Experience</a>
       <a href="creative.html">Creative</a>
       <a href="contact.html">Contact</a>
     </div>
   </nav>
 
-  <!-- Experience Content -->
-  <main class="page">
-    <h2>Experience</h2>
+  <main class="experience-page">
+    <h1 class="experience-title">Experience</h1>
 
-    <!-- Education -->
-    <section class="section">
-      <h3>Education</h3>
-      <p>
-        <strong>Columbia University</strong> — B.S. in Operations Research: Financial Engineering
-      </p>
-      <p class="muted">
-        Relevant coursework: Data Structures & Algorithms, Databases, Optimization,
-        Linear Algebra, Statistics, Artificial Intelligence
-      </p>
-    </section>
+    <!-- EDUCATION -->
+    <div class="accordion">
+      <button class="accordion-header">
+        Education
+        <span class="chevron">⌄</span>
+      </button>
 
-    <!-- Technical & Product Experience -->
-    <section class="section">
-      <h3>Technical & Product Experience</h3>
-      <ul class="experience-list">
-        <li>
-          <strong>Amazon Web Services (AWS)</strong><br />
-          Software Development Engineer Intern
-        </li>
-        <li>
-          <strong>Bloomberg</strong><br />
-          Software Engineer Intern
-        </li>
-        <li>
-          <strong>Exiger</strong><br />
-          Product Operations Intern
-        </li>
-        <li>
-          <strong>Columbia IEOR Department</strong><br />
-          Lead Product Engineer
-        </li>
-        <li>
-          <strong>NASA L’SPACE (NPWEE)</strong><br />
-          Product Strategist
-        </li>
-      </ul>
-    </section>
+      <div class="accordion-content">
+        <!-- DEGREE CONTENT -->
+        <p><strong>Columbia University</strong><br />
+        B.S. Operations Research: Financial Engineering<br />
+        Minor in Computer Science</p>
 
-    <!-- Leadership & Campus -->
-    <section class="section">
-      <h3>Leadership & Campus Involvement</h3>
-      <ul class="experience-list">
-        <li>
-          <strong>Columbia Organization for Rising Entrepreneurs (CORE)</strong><br />
-          Product Management Fellowship Lead, CORE Podcast Co-Founder, Digital Strategist
-        </li>
-        <li>
-          Teaching Assistant — Master’s Financial Engineering Seminar
-        </li>
-        <li>
-          Columbia Data Science Society — Executive Board & Digital Strategy
-        </li>
-        <li>
-          Club Bangla — Social Chair & Media Lead
-        </li>
-      </ul>
-    </section>
+        <p><strong>Relevant Coursework</strong></p>
+
+        <!-- COURSES DROPDOWN -->
+        <button class="sub-accordion-header">
+          Courses Taken
+          <span class="chevron">⌄</span>
+        </button>
+
+        <div class="sub-accordion-content">
+          <div class="courses-box">
+            <p><strong>Financial Engineering</strong></p>
+            <ul>
+              <li>Probability for Engineers</li>
+              <li>Stochastic Systems</li>
+              <li>Optimization</li>
+            </ul>
+
+            <p><strong>Computer Science</strong></p>
+            <ul>
+              <li>Data Structures</li>
+              <li>Databases</li>
+              <li>iOS Development</li>
+            </ul>
+
+            <p><strong>Statistics & Data</strong></p>
+            <ul>
+              <li>Statistical Inference</li>
+              <li>Machine Learning</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WORK EXPERIENCE -->
+    <div class="accordion">
+      <button class="accordion-header">
+        Work Experience
+        <span class="chevron">⌄</span>
+      </button>
+
+      <div class="accordion-content">
+        <!-- PASTE RESUME EXPERIENCE HERE -->
+        <p><strong>Software Engineering Intern – Bloomberg</strong><br />
+        Description goes here.</p>
+
+        <p><strong>Software Engineering Intern – Amazon</strong><br />
+        Description goes here.</p>
+
+        <p><strong>Product / Ops Intern – Exiger</strong><br />
+        Description goes here.</p>
+      </div>
+    </div>
+
+    <!-- LEADERSHIP -->
+    <div class="accordion">
+      <button class="accordion-header">
+        Leadership & Extracurriculars
+        <span class="chevron">⌄</span>
+      </button>
+
+      <div class="accordion-content">
+        <!-- PASTE LEADERSHIP HERE -->
+        <p><strong>Women@CORE – Lead</strong><br />
+        Description goes here.</p>
+
+        <p><strong>CORE Product Fellowship</strong><br />
+        Description goes here.</p>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="accordion">
+      <button class="accordion-header">
+        Skills
+        <span class="chevron">⌄</span>
+      </button>
+
+      <div class="accordion-content">
+        <p><strong>Languages:</strong> Python, Java, SQL</p>
+        <p><strong>Frameworks:</strong> Flask, React, iOS SDK</p>
+        <p><strong>Tools:</strong> AWS, Git, Figma</p>
+      </div>
+    </div>
+
   </main>
+
+  <script src="js/accordion.js"></script>
 </body>
 </html>
