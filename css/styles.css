@@ -169,3 +169,26 @@ h3 {
   color: #666;
   margin-top: 8px;
 }
+
+/* =========================
+   Home Split Layout
+========================= */
+
+.home-split {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+  gap: 60px;
+  max-width: 1000px;
+}
+
+.home-image img {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 4px; /* subtle, not influencer-y */
+}
+
+.home-content {
+  text-align: left;
+}
+
