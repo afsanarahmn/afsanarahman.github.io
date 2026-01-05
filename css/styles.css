@@ -218,78 +218,85 @@ h3 {
 /* =========================
    EXPERIENCE PAGE
 ========================= */
-
+/* EXPERIENCE PAGE LAYOUT */
 .experience-page {
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 0 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 40px;
 }
 
-.experience-title {
-  font-size: 2.4rem;
-  margin-bottom: 48px;
+.experience-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 80px;
 }
 
-/* Accordion */
+/* LEFT COLUMN */
+.experience-title h1 {
+  font-size: 64px;
+  font-weight: 700;
+  margin: 0;
+  position: sticky;
+  top: 140px;
+}
+
+/* ACCORDIONS */
 .accordion {
-  border-top: 1px solid #ddd;
-}
-
-.accordion:last-child {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .accordion-header {
   width: 100%;
   background: none;
   border: none;
-  padding: 28px 0;
-  font-size: 1.6rem;
+  padding: 32px 0;
+  font-size: 28px;
   font-weight: 600;
-  text-align: left;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   cursor: pointer;
 }
 
 .accordion-content {
-  display: none;
-  padding-bottom: 32px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
 }
 
-/* Chevron */
+.accordion-content.open {
+  padding-bottom: 24px;
+}
+
+/* CHEVRON */
 .chevron {
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #111;
+  border-bottom: 2px solid #111;
+  transform: rotate(45deg);
   transition: transform 0.3s ease;
 }
 
-.accordion.open .chevron {
-  transform: rotate(180deg);
+.accordion-header.active .chevron {
+  transform: rotate(-135deg);
 }
 
-/* Sub accordion (Courses) */
-.sub-accordion-header {
+/* NESTED COURSES */
+.nested-header {
   background: none;
   border: none;
-  font-size: 1rem;
-  font-weight: 600;
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  font-size: 16px;
+  margin-top: 16px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.sub-accordion-content {
-  display: none;
-  margin-top: 12px;
-}
-
-/* Courses box */
-.courses-box {
+.course-box {
   background: #f4f4f4;
-  padding: 16px 20px;
-  border-radius: 4px;
+  padding: 16px;
+  margin-top: 12px;
+  border-radius: 6px;
 }
-
-
-
