@@ -168,27 +168,32 @@ h3 {
 ========================= */
 
 .home-split {
-  max-width: 1000px;
-  margin: 40px auto 0;
-  padding: 0 32px;
+  max-width: 1100px;
+  margin: 40px auto 0; /* centers the whole section */
+  padding: 0 48px;
 
   display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 64px;
+  grid-template-columns: 420px 1fr;
+  gap: 72px;
   align-items: center;
 }
 
 /* Image container */
 .home-image {
-  width: 100%;
+  display: flex;
+  justify-content: center; /* centers image in its column */
 }
-
 /* Image itself */
 .home-image img {
   width: 100%;
-  height: 420px;
+  max-width: 380px;
+  height: 440px;
+
   object-fit: cover;
+
   border-radius: 6px;
+  border: 2px solid #e6e6e6; /* light, intentional border */
+  background-color: #fff;   /* prevents weird edge artifacts */
 }
 
 /* Text content */
