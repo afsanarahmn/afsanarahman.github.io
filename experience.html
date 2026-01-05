@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Experience | Afsana Rahman</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
 
-  <!-- NAV (unchanged) -->
-  <header class="site-header">
-    <div class="logo">AR</div>
-    <nav>
+  <!-- NAV (keeps your existing nav styles) -->
+  <header class="nav">
+    <div class="nav-left">AR</div>
+    <nav class="nav-right">
       <a href="about.html">About</a>
       <a href="experience.html" class="active">Experience</a>
       <a href="creative.html">Creative</a>
@@ -20,7 +20,7 @@
     </nav>
   </header>
 
-  <!-- EXPERIENCE LAYOUT -->
+  <!-- EXPERIENCE PAGE -->
   <main class="experience-page">
     <div class="experience-grid">
 
@@ -36,37 +36,47 @@
         <div class="accordion">
           <button class="accordion-header">
             Education
-            <span class="chevron">⌄</span>
+            <span class="chevron"></span>
           </button>
-
           <div class="accordion-content">
+
             <h3>Columbia University</h3>
             <p>B.S. Operations Research: Financial Engineering</p>
             <p>Minor in Computer Science</p>
 
-            <!-- Courses Taken (nested) -->
-            <button class="nested-toggle">Courses Taken ⌄</button>
-            <div class="nested-box">
-              <strong>Financial Engineering</strong>
-              <ul>
-                <li>Probability for Engineers</li>
-                <li>Stochastic Systems</li>
-                <li>Optimization</li>
-              </ul>
+            <!-- NESTED COURSES -->
+            <div class="nested-accordion">
+              <button class="nested-header">
+                Courses Taken
+                <span class="chevron small"></span>
+              </button>
+              <div class="nested-content">
 
-              <strong>Computer Science</strong>
-              <ul>
-                <li>Data Structures</li>
-                <li>Databases</li>
-                <li>iOS Development</li>
-              </ul>
+                <div class="course-box">
+                  <strong>Financial Engineering</strong>
+                  <ul>
+                    <li>Probability for Engineers</li>
+                    <li>Stochastic Systems</li>
+                    <li>Optimization</li>
+                  </ul>
 
-              <strong>Statistics & Data</strong>
-              <ul>
-                <li>Statistical Inference</li>
-                <li>Machine Learning</li>
-              </ul>
+                  <strong>Computer Science</strong>
+                  <ul>
+                    <li>Data Structures</li>
+                    <li>Databases</li>
+                    <li>iOS Development</li>
+                  </ul>
+
+                  <strong>Statistics & Data</strong>
+                  <ul>
+                    <li>Statistical Inference</li>
+                    <li>Machine Learning</li>
+                  </ul>
+                </div>
+
+              </div>
             </div>
+
           </div>
         </div>
 
@@ -74,21 +84,22 @@
         <div class="accordion">
           <button class="accordion-header">
             Work Experience
-            <span class="chevron">⌄</span>
+            <span class="chevron"></span>
           </button>
-
           <div class="accordion-content">
-            <h3>Software Engineer Intern — BiviCare</h3>
-            <p>Built real-time adjudication pipelines in Python & SQL to flag insurance fraud.</p>
 
-            <h3>Application Support Intern — Exiger</h3>
-            <p>Owned operational tooling, dashboards, and support workflows across product teams.</p>
+            <h3>BiviCare — Software Engineering Intern</h3>
+            <p>Built real-time healthcare claims adjudication systems using Python and SQL.</p>
 
-            <h3>Intern — Amazon</h3>
-            <p>Worked on backend services and monitoring systems in a production environment.</p>
+            <h3>Exiger — Application Support Intern</h3>
+            <p>Owned operational workflows, dashboards, and internal tooling across product teams.</p>
 
-            <h3>Intern — Bloomberg</h3>
-            <p>Supported data engineering workflows and internal analytics tools.</p>
+            <h3>Amazon — Software Development Intern</h3>
+            <p>Developed cloud monitoring tools across EKS clusters and ETCD systems.</p>
+
+            <h3>Bloomberg — Software Engineering Intern</h3>
+            <p>Worked on real-time data stream processing pipelines.</p>
+
           </div>
         </div>
 
@@ -96,18 +107,19 @@
         <div class="accordion">
           <button class="accordion-header">
             Leadership & Extracurriculars
-            <span class="chevron">⌄</span>
+            <span class="chevron"></span>
           </button>
-
           <div class="accordion-content">
-            <h3>Product Management Fellowship Lead — CORE</h3>
-            <p>Led product education initiatives and mentored student founders.</p>
 
-            <h3>Founder — High School Newspaper</h3>
-            <p>Built and led the school’s first student-run publication.</p>
+            <h3>CORE (Columbia Organization of Rising Entrepreneurs)</h3>
+            <p>Product Management Fellowship Lead & Women@CORE Initiative Lead.</p>
 
-            <h3>CS Honor Society Founder</h3>
-            <p>Created a multi-year SWE track and organized city-wide hackathons.</p>
+            <h3>NASA NPWEE</h3>
+            <p>Product Strategist for AI-enabled Mars microbot systems.</p>
+
+            <h3>Columbia Build Lab</h3>
+            <p>Software engineering consultant for early-stage startups.</p>
+
           </div>
         </div>
 
@@ -115,13 +127,15 @@
         <div class="accordion">
           <button class="accordion-header">
             Skills
-            <span class="chevron">⌄</span>
+            <span class="chevron"></span>
           </button>
-
           <div class="accordion-content">
+
             <p><strong>Languages:</strong> Python, Java, SQL</p>
-            <p><strong>Tools:</strong> AWS, Git, Docker</p>
-            <p><strong>Focus:</strong> Product Strategy, Systems Design, Data</p>
+            <p><strong>Frameworks:</strong> Flask, SQLAlchemy</p>
+            <p><strong>Cloud:</strong> AWS, EKS</p>
+            <p><strong>Product:</strong> Roadmapping, Metrics, Stakeholder Management</p>
+
           </div>
         </div>
 
@@ -129,21 +143,6 @@
     </div>
   </main>
 
-  <!-- SIMPLE TOGGLE SCRIPT -->
-  <script>
-    document.querySelectorAll(".accordion-header").forEach(button => {
-      button.addEventListener("click", () => {
-        const content = button.nextElementSibling;
-        button.classList.toggle("open");
-        content.style.display = content.style.display === "block" ? "none" : "block";
-      });
-    });
-
-    document.querySelector(".nested-toggle").addEventListener("click", function () {
-      const box = this.nextElementSibling;
-      box.style.display = box.style.display === "block" ? "none" : "block";
-    });
-  </script>
-
+  <script src="js/accordion.js"></script>
 </body>
 </html>
