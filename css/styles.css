@@ -215,4 +215,81 @@ h3 {
   margin-bottom: 28px;
 }
 
+/* =========================
+   EXPERIENCE PAGE
+========================= */
+
+.experience-page {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 32px;
+}
+
+.experience-title {
+  font-size: 2.4rem;
+  margin-bottom: 48px;
+}
+
+/* Accordion */
+.accordion {
+  border-top: 1px solid #ddd;
+}
+
+.accordion:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 28px 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.accordion-content {
+  display: none;
+  padding-bottom: 32px;
+}
+
+/* Chevron */
+.chevron {
+  transition: transform 0.3s ease;
+}
+
+.accordion.open .chevron {
+  transform: rotate(180deg);
+}
+
+/* Sub accordion (Courses) */
+.sub-accordion-header {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+
+.sub-accordion-content {
+  display: none;
+  margin-top: 12px;
+}
+
+/* Courses box */
+.courses-box {
+  background: #f4f4f4;
+  padding: 16px 20px;
+  border-radius: 4px;
+}
+
+
 
