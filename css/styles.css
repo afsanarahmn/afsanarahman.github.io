@@ -169,7 +169,7 @@ h3 {
 
 .home-split {
   max-width: 1100px;
-  margin: 40px auto 0; /* centers the whole section */
+  margin: 0 auto; /* IMPORTANT */
   padding: 0 48px;
 
   display: grid;
@@ -207,6 +207,12 @@ h3 {
   font-size: 1.05rem;
   color: #444;
   margin-bottom: 28px;
+}
+
+.hero {
+  min-height: calc(100vh - 80px); /* subtract nav height */
+  display: flex;
+  align-items: center; /* vertical centering */
 }
 
 
