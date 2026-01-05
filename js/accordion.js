@@ -1,17 +1,22 @@
-document.querySelectorAll('.accordion-header').forEach(button => {
-  button.addEventListener('click', () => {
-    const accordion = button.parentElement;
-    accordion.classList.toggle('open');
+const headers = document.querySelectorAll('.accordion-header');
 
-    const content = accordion.querySelector('.accordion-content');
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
-  });
-});
+headers.forEach(header => {
+  header.addEventListener('click', () => {
 
-document.querySelectorAll('.sub-accordion-header').forEach(button => {
-  button.addEventListener('click', () => {
-    const content = button.nextElementSibling;
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
-    button.querySelector('.chevron').classList.toggle('open');
+    headers.forEach(h => {
+      if (h !== header) {
+        h.classList.remove('active');
+        h.nextElementSibling.style.maxHeight = null;
+      }
+    });
+
+    header.classList.toggle('active');
+    const content = header.nextElementSibling;
+
+    if (header.classList.contains('active')) {
+      content.style.maxHeight = content.scrollHeight + 'px';
+    } else {
+      content.style.maxHeight = null;
+    }
   });
 });
